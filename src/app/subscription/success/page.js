@@ -20,11 +20,12 @@ function SuccessContent() {
   };
 
   const symbol = currencies[market] || '$';
+  const accentColor = '#FF6B6B';
 
   return (
     <div style={{
       minHeight: '100vh',
-      background: 'linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%)',
+      background: '#FAFAFA',
       padding: '20px',
       fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
       display: 'flex',
@@ -32,48 +33,46 @@ function SuccessContent() {
       justifyContent: 'center'
     }}>
       <div style={{
-        maxWidth: '440px',
+        maxWidth: '420px',
         width: '100%'
       }}>
         {/* Success Card */}
         <div style={{
           background: 'white',
-          borderRadius: '24px',
-          padding: '40px 32px',
+          borderRadius: '20px',
+          padding: '40px 28px',
           textAlign: 'center',
-          boxShadow: '0 8px 24px rgba(0,0,0,0.1)'
+          boxShadow: '0 4px 20px rgba(0,0,0,0.08)'
         }}>
           {/* Success Icon */}
           <div style={{
             width: '80px',
             height: '80px',
-            background: 'linear-gradient(135deg, #34D399 0%, #10B981 100%)',
+            background: '#F0FDF4',
             borderRadius: '50%',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
             margin: '0 auto 24px',
-            fontSize: '40px',
-            boxShadow: '0 8px 16px rgba(16, 185, 129, 0.3)'
+            fontSize: '40px'
           }}>
             ✓
           </div>
 
           {/* Title */}
           <h1 style={{
-            fontSize: '28px',
+            fontSize: '24px',
             fontWeight: '700',
-            color: '#1f2937',
-            marginBottom: '12px',
-            letterSpacing: '-0.5px'
+            color: '#1a1a1a',
+            marginBottom: '12px'
           }}>
             Welcome to OrganicApps!
           </h1>
 
           {/* Description */}
           <p style={{
-            fontSize: '16px',
-            color: '#6b7280',
+            fontSize: '15px',
+            color: '#666',
             lineHeight: '1.6',
             marginBottom: '32px'
           }}>
@@ -82,16 +81,16 @@ function SuccessContent() {
 
           {/* Order Details */}
           <div style={{
-            background: '#f9fafb',
-            borderRadius: '16px',
+            background: '#F9FAFB',
+            borderRadius: '12px',
             padding: '20px',
             marginBottom: '32px',
             textAlign: 'left'
           }}>
             <div style={{
-              fontSize: '14px',
+              fontSize: '13px',
               fontWeight: '600',
-              color: '#6b7280',
+              color: '#999',
               marginBottom: '16px',
               textTransform: 'uppercase',
               letterSpacing: '0.5px'
@@ -104,9 +103,9 @@ function SuccessContent() {
               justifyContent: 'space-between',
               marginBottom: '12px'
             }}>
-              <span style={{ color: '#6b7280', fontSize: '15px' }}>Plan</span>
-              <span style={{ color: '#1f2937', fontSize: '15px', fontWeight: '600' }}>
-                Every {interval} Weeks
+              <span style={{ color: '#666', fontSize: '14px' }}>Plan</span>
+              <span style={{ color: '#1a1a1a', fontSize: '14px', fontWeight: '600' }}>
+                {interval}-Week Plan
               </span>
             </div>
 
@@ -115,8 +114,8 @@ function SuccessContent() {
               justifyContent: 'space-between',
               marginBottom: '12px'
             }}>
-              <span style={{ color: '#6b7280', fontSize: '15px' }}>Amount</span>
-              <span style={{ color: '#10B981', fontSize: '15px', fontWeight: '700' }}>
+              <span style={{ color: '#666', fontSize: '14px' }}>Amount</span>
+              <span style={{ color: accentColor, fontSize: '14px', fontWeight: '700' }}>
                 {symbol}{amount}
               </span>
             </div>
@@ -125,18 +124,18 @@ function SuccessContent() {
               <div style={{
                 marginTop: '16px',
                 paddingTop: '16px',
-                borderTop: '1px solid #e5e7eb'
+                borderTop: '1px solid #E5E7EB'
               }}>
                 <div style={{ 
-                  fontSize: '12px', 
-                  color: '#9ca3af',
+                  fontSize: '11px', 
+                  color: '#999',
                   marginBottom: '4px'
                 }}>
                   Transaction ID
                 </div>
                 <div style={{
-                  fontSize: '13px',
-                  color: '#6b7280',
+                  fontSize: '12px',
+                  color: '#666',
                   fontFamily: 'monospace',
                   wordBreak: 'break-all'
                 }}>
@@ -154,7 +153,7 @@ function SuccessContent() {
             <div style={{
               fontSize: '14px',
               fontWeight: '600',
-              color: '#1f2937',
+              color: '#1a1a1a',
               marginBottom: '16px'
             }}>
               What's next?
@@ -164,7 +163,7 @@ function SuccessContent() {
               '📱 Download the OrganicApps mobile app',
               '🎯 Complete your personalized assessment',
               '💪 Start your first workout today',
-              '🍎 Explore your meal plan recommendations'
+              '🎁 Explore your meal plan recommendations'
             ].map((step, i) => (
               <div key={i} style={{
                 display: 'flex',
@@ -172,7 +171,7 @@ function SuccessContent() {
                 gap: '12px',
                 padding: '10px 0',
                 fontSize: '14px',
-                color: '#6b7280'
+                color: '#666'
               }}>
                 {step}
               </div>
@@ -185,19 +184,16 @@ function SuccessContent() {
             style={{
               width: '100%',
               padding: '16px',
-              background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+              background: `linear-gradient(135deg, ${accentColor} 0%, #E55555 100%)`,
               color: 'white',
               border: 'none',
-              borderRadius: '16px',
+              borderRadius: '30px',
               fontSize: '16px',
               fontWeight: '600',
               cursor: 'pointer',
               marginBottom: '16px',
-              boxShadow: '0 4px 12px rgba(16, 185, 129, 0.3)',
               transition: 'transform 0.2s'
             }}
-            onMouseEnter={(e) => e.target.style.transform = 'translateY(-2px)'}
-            onMouseLeave={(e) => e.target.style.transform = 'translateY(0)'}
           >
             Get Started Now
           </button>
@@ -205,10 +201,10 @@ function SuccessContent() {
           {/* Support Link */}
           <div style={{
             fontSize: '13px',
-            color: '#9ca3af'
+            color: '#999'
           }}>
             Need help? <a href="mailto:support@myorganicapps.com" style={{
-              color: '#10B981',
+              color: accentColor,
               textDecoration: 'none',
               fontWeight: '600'
             }}>Contact Support</a>
@@ -220,7 +216,7 @@ function SuccessContent() {
           textAlign: 'center',
           marginTop: '24px',
           fontSize: '12px',
-          color: '#9ca3af'
+          color: '#999'
         }}>
           A confirmation email has been sent to your inbox
         </div>
